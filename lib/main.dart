@@ -9,6 +9,7 @@ void main() {
       routes: {
         '/new-contact': (context) => const NewContact(),
       },
+      debugShowCheckedModeBanner: false,
     ),
   );
 }

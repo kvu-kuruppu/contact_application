@@ -29,6 +29,8 @@ class _NewContactState extends State<NewContact> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add Contact'),
+        backgroundColor: Colors.black,
+        elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
@@ -43,6 +45,9 @@ class _NewContactState extends State<NewContact> {
                 hintText: 'Enter name',
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             TextButton(
               onPressed: () {
                 final contact = Contact(name: _controller.text);
@@ -50,9 +55,14 @@ class _NewContactState extends State<NewContact> {
                 Navigator.of(context).pop();
               },
               style: TextButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
+                backgroundColor: Colors.black,
               ),
-              child: const Text('Add Contact'),
+              child: const Text(
+                'Add Contact',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ),
           ],
         ),
